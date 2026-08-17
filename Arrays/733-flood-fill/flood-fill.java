@@ -15,9 +15,8 @@ class Solution {
             }
             image[i][j] = color;
             dfs(image,i-1,j,originalColor,color);
-            dfs(image,i,j-1,originalColor,color);                        dfs(image,i,j+1,originalColor,color);
+            dfs(image,i,j-1,originalColor,color);                        
+            dfs(image,i,j+1,originalColor,color);
             dfs(image,i+1,j,originalColor,color);
-
-
         }
 }
