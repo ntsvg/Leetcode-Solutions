@@ -2,10 +2,7 @@ class Solution {
     public List<Integer> toggleLightBulbs(List<Integer> bulbs) {
         HashSet<Integer> set = new HashSet<>();
         for(int num:bulbs){
-            if(set.contains(num)){
-                set.remove(num);
-            }
-            else{
+            if(!set.remove(num)){
                 set.add(num);
             }
         }
