@@ -1,15 +1,15 @@
 class Solution {
     public List<Integer> toggleLightBulbs(List<Integer> bulbs) {
-        HashMap<Integer,Integer> map = new HashMap<>();
-        List<Integer> list = new ArrayList<>();
+        HashSet<Integer> set = new HashSet<>();
         for(int num:bulbs){
-            map.put(num,map.getOrDefault(num,0)+1);
-        }
-        for(int num:map.keySet()){
-            if(map.get(num)%2 == 1){
-                list.add(num);
+            if(set.contains(num)){
+                set.remove(num);
+            }
+            else{
+                set.add(num);
             }
         }
+        List<Integer> list = new ArrayList<>(set);
         Collections.sort(list);
         return list;
     }
