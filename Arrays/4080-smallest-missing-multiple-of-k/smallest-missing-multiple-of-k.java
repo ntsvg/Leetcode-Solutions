@@ -6,7 +6,7 @@ class Solution {
                 set.add(num);
             }
         }
-        for(int i = 1;i<=200;i++){
+        for(int i = 1;i<=101;i++){
             if(!set.contains(k*i)){
                 return k*i;
             }
